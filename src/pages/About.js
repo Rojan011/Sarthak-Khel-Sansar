@@ -35,7 +35,7 @@ const About = () => {
             and uplift communities. With unwavering determination and a
             heartfelt passion for change, we have undertaken numerous projects
             and initiatives, all aimed at addressing the pressing challenges
-            faced by marginalized individuals and communities. Nice
+            faced by marginalized individuals and communities.
           </p>
         </div>
       </div>
