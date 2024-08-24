@@ -539,6 +539,17 @@ span {
   margin-top: 60px;
   margin-bottom: 120px;
 }
+.slider-container {
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.slider-container .slick-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .volunteer h1 {
   color: var(--red);

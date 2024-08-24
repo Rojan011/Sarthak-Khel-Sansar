@@ -35,8 +35,8 @@ const Footer = () => {
 
       <section class="footer">
         <div class="footer-content">
-          <div class="footer-about">
-            <h1>OUR VISION</h1>
+          <div class="footer-about ">
+            <h1 className="text-center">OUR VISION</h1>
             <p>
               Our mission at Sarthak Khel Sansar is to transform lives and
               uplift communities through the power of play. We strive to create
@@ -53,69 +53,6 @@ const Footer = () => {
               the opportunity to thrive and reach their full potential.
             </p>
           </div>
-{/* 
-          <div class="footer-links">
-            <h2
-              class="links"
-              onClick={() => {
-                setLinks(!Links);
-              }}
-            >
-              QUICK LINKS
-            </h2>
-            <br />
-            <ul class={"footer-links-ul " + (Links && "active-links")}>
-              <li>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                <Link to="about">About</Link>
-              </li>
-              <li>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                <Link to="causes">Causes</Link>
-              </li>
-              <li>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                <Link to="event">Events</Link>
-              </li>
-              <li>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                <Link to="news">News</Link>
-              </li>
-              <li>
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                <Link to="contact">Contact</Link>
-              </li>
-            </ul>
-          </div> */}
-
-          {/* <div class="gallery">
-            <h2
-              class="gal-btn"
-              onClick={() => {
-                setGallery(!Gallery);
-              }}
-            >
-              GALLERY
-            </h2>
-            <div class={"gal-container " + (Gallery && "gal-container-active")}>
-              <div>
-                <img src="assets/ga1.png" />
-                <img src="assets/ga2.png" />
-              </div>
-              <div>
-                <img src="assets/gap3.png" />
-                <img src="assets/gal4.png" />
-              </div>
-              <div>
-                <img src="assets/gal5.png" />
-                <img src="assets/gal6.png" />
-              </div>
-            </div>
-          </div> */}
 
           <div class="contact-footer">
             <h2
@@ -170,7 +107,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <HeaderNav/>
+          <HeaderNav />
           {/* <p class="copyright">
             Copyright @ 2024. SARTHAK KHEL SANSAR . All Rights Reserved.
           </p> */}

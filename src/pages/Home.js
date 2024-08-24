@@ -15,6 +15,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FeaturedCard from "../components/FeaturedCard";
 import { ProfileCard } from "../components/ProfileCard";
+import { Team } from "../Team";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 const Home = () => {
   React.useEffect(() => {
@@ -24,7 +27,7 @@ const Home = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
   };
@@ -160,7 +163,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Slider className="w-full flex overflow-hidden">
+      {/* <Slider className="w-full flex overflow-hidden">
         {reviews.map((e) => {
           return (
             <section class="testimonials">
@@ -186,39 +189,19 @@ const Home = () => {
             </section>
           );
         })}
-        {/* <section class="testimonials">
-          <h1>WHAT PEOPLE SAY</h1>
-
-          <div class="dialog">
-            <img src="assets/quotes.png" />
-            <p style={{ marginBottom: "30px" }}>
-              People say that life is a journey, and along the way, we encounter
-              joys, sorrows, and countless moments that shape our stories. What
-              we say and do, the connections we make, and the impact we leave on
-              the world are all part of this beautiful narrative
-            </p>
-
-            <div class="triangle"></div>
-            <span>
-              <span style={{ color: "var(--red)" }}>JOHN DOE</span> | NGO
-            </span>
-          </div>
-
-          <div class="test-photos">
-            <img src="assets/test1.png" />
-            <img src="assets/test2.png" />
-            <img src="assets/test3.png" />
-            <img src="assets/test4.png" class="display" />
-            <img src="assets/test5.png" class="display" />
-          </div>
-        </section> */}
-      </Slider>
+      </Slider> */}
       <section class="volunteer">
         <p class="title">
           OUR <span style={{ color: "var(--red)" }}>TEAM</span>
         </p>
 
-        <ProfileCard />
+        <div className="slider-container">
+          <Slider {...settings}>
+            {Team.map((item) => (
+              <ProfileCard name={item.name} position={item.position} />
+            ))}
+          </Slider>
+        </div>
       </section>
     </div>
   );
