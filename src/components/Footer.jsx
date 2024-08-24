@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
           <button
             onClick={() => {
-              alert("subscribed!!!");
+              alert("Subscribed!!!");
             }}
           >
             Subscribe
@@ -140,8 +140,8 @@ const Footer = () => {
                   <h3>Head Office</h3>
                 </div>
                 <div class="contact-ad">
-                  <p>123, Main Street, Your City</p>
-                  <p>USA 789456</p>
+                  <p>Putalisadak</p>
+                  <p>Nepal</p>
                 </div>
               </div>
               <div class="contact-card">
@@ -152,8 +152,8 @@ const Footer = () => {
                   <h3>Phone Number</h3>
                 </div>
                 <div class="contact-ad">
-                  <p>123, Main Street, Your City</p>
-                  <p>USA 789456</p>
+                  <p>+977 9867053549</p>
+                  <p>Bahity Marg, Bafal, Kathmandu, Nepal</p>
                 </div>
               </div>
               <div class="contact-card">
@@ -164,8 +164,7 @@ const Footer = () => {
                   <h3>Email</h3>
                 </div>
                 <div class="contact-ad">
-                  <p>123, Main Street, Your City</p>
-                  <p>USA 789456</p>
+                  <p>sandeshkoirala1212@gmail.com</p>
                 </div>
               </div>
             </div>

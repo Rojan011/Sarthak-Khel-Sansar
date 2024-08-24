@@ -30,6 +30,8 @@ import {
               variant="lead"
               color="blue"
               textGradient
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaFacebook />
             </Typography>
@@ -41,6 +43,8 @@ import {
               variant="lead"
               color="light-blue"
               textGradient
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedinIn  />
             </Typography>
@@ -52,6 +56,8 @@ import {
               variant="lead"
               color="purple"
               textGradient
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaInstagram />
             </Typography>

@@ -30,12 +30,16 @@ const About = () => {
         <div className="flex flex-col w-[90%] md:w-[50%] h-full justify-around text-center text-gray-100">
           <h1 className="text-6xl tracking-tighter  font-sans">About Us</h1>
           <p className="text-gray-200">
-            We are a team of dedicated individuals, volunteers, and supporters
-            who share a common vision: to alleviate suffering, promote equality,
-            and uplift communities. With unwavering determination and a
-            heartfelt passion for change, we have undertaken numerous projects
-            and initiatives, all aimed at addressing the pressing challenges
-            faced by marginalized individuals and communities.
+            <h2 className="text-[30px]">Welcome to Sarthak Khel Sansar!</h2> 
+            <p>At Sarthak Khel Sansar, we believe in the power of play to transform lives and build stronger communities. Our NGO is dedicated to providing opportunities for all ages to engage in sports and play-based learning, viewing play as a crucial tool for personal growth and social development.</p>
+
+            <p>Our mission is to create inclusive, safe, and accessible environments where everyone can experience the joy and benefits of play. We focus on empowering underprivileged youth, promoting gender equality in sports, and fostering community unity.</p>
+
+            <p>Our team is a passionate group of professionals and volunteers united by a vision of igniting change. Through our programs, we encourage physical activity, teach life skills, and build lasting connections.</p>
+
+            <p>Join us in our journey to create a vibrant, resilient world—one game at a time.</p>
+
+            <p>Let’s play hard, learn fast, and rise together.</p>
           </p>
         </div>
       </div>

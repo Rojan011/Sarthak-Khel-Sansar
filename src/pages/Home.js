@@ -186,7 +186,7 @@ const Home = () => {
             </section>
           );
         })}
-        {/* <section class="testimonials">
+        {/*<section class="testimonials">
           <h1>WHAT PEOPLE SAY</h1>
 
           <div class="dialog">
