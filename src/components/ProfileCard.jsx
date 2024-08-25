@@ -8,7 +8,7 @@ import {
   } from "@material-tailwind/react";
   import { FaInstagram,FaFacebook,FaLinkedinIn  } from "react-icons/fa";
    
-  export function ProfileCard() {
+  export function ProfileCard(props) {
     return (
       <Card className="w-96">
         <CardHeader floated={false} className="h-80">
@@ -16,10 +16,10 @@ import {
         </CardHeader>
         <CardBody className="text-center">
           <Typography variant="h4" color="blue-gray" className="mb-2">
-            Sandesh Koirala
+            {props.name}
           </Typography>
           <Typography color="blue-gray" className="font-medium" textGradient>
-            CEO / Co-Founder
+            {props.position}
           </Typography>
         </CardBody>
         <CardFooter className="flex justify-center gap-7 pt-2">
