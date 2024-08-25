@@ -5,7 +5,8 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Eventsimg } from "../Eventsimg";
+import UpcomingCard from "../components/UpcomingCard";
+import { UpcomingEvent } from "../UpcomingEvent";
 
 const Events = () => {
   var settings = {
@@ -21,16 +22,23 @@ const Events = () => {
         <h1 className="text-red-500 font-sans font-bold text-5xl">Events</h1>
       </div>
       <div className="slider-container">
-      <Slider {...settings}>
-      {Eventsimg.map((item) => (
-              <img src={item.imgs} alt="SKS" />
-            ))}
+        <Slider {...settings}>
+          <img  src="assets/nban.jpg" alt="" />
+          <img  src="assets/nban2.jpg" alt="" />
+          <img  src="assets/nban3.jpg" alt="" />
         </Slider>
       </div>
-      <h1 className="text-center text-5xl mt-5">
+      <h1 className="text-center text-5xl mt-5 mb-5">
         Upcoming{" "}
         <span className="text-red-500 text-center text-5xl mt-5">Events</span>
       </h1>
+      <div className="slider-container">
+        <Slider {...settings}>
+          {UpcomingEvent.map((item) => (
+            <UpcomingCard name={item.name} position={item.position} />
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };

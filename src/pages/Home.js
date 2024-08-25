@@ -69,7 +69,6 @@ const Home = () => {
     <div>
       <section class="banner-1">
         <div class="diagonal-div"></div>
-        <div class="diagonal-div-2"></div>
 
         <div class="banner-text">
           <p class="banner-heading-1">PLAY WITH PURPOSE</p>
@@ -190,7 +189,7 @@ const Home = () => {
           );
         })}
       </Slider> */}
-      <section class="volunteer">
+      <section class="volunteer bg-slate-200">
         <p class="title">
           OUR <span style={{ color: "var(--red)" }}>TEAM</span>
         </p>
