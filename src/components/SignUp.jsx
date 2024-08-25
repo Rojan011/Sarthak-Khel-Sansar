@@ -20,7 +20,7 @@ const SignUp = ({ setUser, setcurrent }) => {
       alert("please fill all details");
     } else {
       console.log("Dd");
-      const res = await axios.post("http://localhost:8000/user/register", {
+      const res = await axios.post("http://localhost:8002/user/register", {
         username: username,
         full_name: name,
         address: address,
@@ -30,6 +30,7 @@ const SignUp = ({ setUser, setcurrent }) => {
         phone_number: phone,
         password: password,
       });
+      console.log(res.data.message);  
       var flag = true;
       if (res.data.message == "fail") {
         console.log("True");
@@ -44,7 +45,7 @@ const SignUp = ({ setUser, setcurrent }) => {
       alert("please fill all details");
     } else {
       const res = await axios.post(
-        "http://localhost:8000/user/login",
+        "http://localhost:8002/user/login",
         {
           username: username,
           password: password,
@@ -167,7 +168,7 @@ const SignUp = ({ setUser, setcurrent }) => {
               </div>
 
               <div className="flex w-[80%] items-baseline justify-between text-red-600 font-bold">
-                address:{" "}
+                Address:{" "}
                 <input
                   type="text"
                   className="border-2 px-1 py-2 text-black font-sans border-black"

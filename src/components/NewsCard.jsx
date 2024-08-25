@@ -36,7 +36,7 @@ const NewsCard = () => {
               <div
                 class="xl:w-1/4 md:w-1/2 p-4 cursor-pointer"
                 onClick={() => {
-                  window.location.replace(news.articlelink);
+                  window.open(news.articlelink, "_blank", "noopener,noreferrer");
                 }}
               >
                 <div class="bg-gray-100 p-6 rounded-lg min-h-[400px]">

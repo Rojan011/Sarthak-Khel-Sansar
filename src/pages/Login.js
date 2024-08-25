@@ -12,7 +12,7 @@ const Login = ({ User, setUser }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     const checkSession = async () => {
-      const res = await axios.get("http://localhost:8000/user/login", {
+      const res = await axios.get("http://localhost:8002/user/login", {
         withCredentials: true,
       });
       setcurrent(res.data);

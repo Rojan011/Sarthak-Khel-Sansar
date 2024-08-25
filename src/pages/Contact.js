@@ -65,8 +65,9 @@ const Contact = () => {
           marginwidth="0"
           title="map"
           scrolling="no"
-          src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
-        ></iframe>
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5209479141363!2d85.29102907418256!3d27.701197425765088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18617be02d5b%3A0x5e25957c2f6abee3!2sTahachal%20Marg%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1724552536547!5m2!1sen!2snp" />
+        
+      
       </div>
       <div class="container px-5 py-24 mx-auto flex">
         <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
