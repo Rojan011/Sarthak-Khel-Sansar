@@ -1,11 +1,61 @@
 // server.js
 const express = require('express');
 const cors = require('cors');
+const nodemailer = require("nodemailer");
+const bodyParser = require("body-parser");
+const bcrypt = require('bcrypt');
+
+const PORT = 8000;
+const port = 8002;
 
 const app = express();
-const PORT = 8000;
-
+app.use(bodyParser.json());
 app.use(cors());
+
+// Set up CORS with credentials
+app.use(cors({
+  origin: 'http://localhost:3000', // Your frontend URL
+  credentials: true
+}));
+
+// Middleware to parse JSON requests
+app.use(express.json());
+
+// Example in-memory user data store
+let users = [];
+
+// Registration endpoint
+app.post('/user/register', async (req, res) => {
+  const { username, full_name, address, city, state, email, phone_number, password } = req.body;
+  const hashedPassword = await bcrypt.hash(password, 10);
+  // Add user registration logic here (e.g., save to database)
+  // For now, just store the user in memory
+  users.push({ username, full_name, address, city, state, email, phone_number, password });
+  res.send({ message: 'success' });
+});
+
+// Login endpoint
+app.post('/user/login', async (req, res) => {
+  const { username, password } = req.body;
+  // Add login logic here (e.g., validate credentials)
+  const user = users.find(u => u.username === username);
+  if (user) {
+    // Compare hashed password
+    const match = await bcrypt.compare(password, user.password);
+    if (match) {
+      res.send({ message: 'success', user });
+    } else {
+      res.send({ message: 'fail' });
+    }
+  } else {
+    res.send({ message: 'fail' });
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
+
 
 // Sample data
 const newsData = [
@@ -67,4 +117,40 @@ app.get('/news', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+// Route to handle contact form submissions
+app.post("/contactus/add", (req, res) => {
+  const { name, email, message } = req.body;
+
+  // Configure the email transport using your Gmail credentials
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "sandeshkoirala1212@gmail.com", // Your Gmail address
+      pass: "nnmu enuh xkyb iffn", // Your Gmail password or app password
+    },
+  });
+
+  const mailOptions = {
+    from: email,
+    to: "sandeshkoirala1212@gmail.com", // Your Gmail address to receive the email
+    subject: `New contact form submission from ${name}`,
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+  };
+
+  // Send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error("Error sending email:", error);
+      return res.status(500).send("Failed to send email.");
+    }
+    console.log("Email sent:", info.response);
+    res.status(200).send("Email sent successfully!");
+  });
+});
+
+// Start the server
+app.listen(8001, () => {
+  console.log("Server is running on port 8001");
 });
