@@ -6,7 +6,7 @@ const Header = ({ path, User }) => {
   const [Toggle, setToggle] = useState("");
   console.log(User, "hello");
   return (
-    <header>
+    <header className="bg-slate-100">
       <div class="logo-container">
         <Link to="/">
           <img src="assets/nlogo.png" class="logo" />

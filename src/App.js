@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import UseGlobal from "./hooks/UseGlobal";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import LoggedIn from "./components/LoggedIn";
 
 function App() {
   const { getUser } = UseGlobal();
@@ -36,6 +37,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="news" element={<News />} />
           <Route path="events" element={<Events />} />
+          <Route path="registers" element={<LoggedIn/>}/>
           <Route
             path="login"
             element={<Login User={User} setUser={setUser} />}
