@@ -3,15 +3,16 @@ import UseGlobal from "../hooks/UseGlobal";
 import axios from "axios";
 
 const LoggedIn = ({ user, setUser }) => {
+  // Provide default values or use optional chaining
   const { getUser, updateUser, check } = UseGlobal();
-  const [name, setname] = useState(user.full_name || "");
-  const [username, setusername] = useState(user.username || "");
-  const [city, setcity] = useState(user.city || "");
-  const [state, setstate] = useState(user.state || "");
-  const [phone, setphone] = useState(user.phone_number || "");
-  const [address, setaddress] = useState(user.address || "");
+  const [name, setname] = useState(user?.full_name || "");
+  const [username, setusername] = useState(user?.username || "");
+  const [city, setcity] = useState(user?.city || "");
+  const [state, setstate] = useState(user?.state || "");
+  const [phone, setphone] = useState(user?.phone_number || "");
+  const [address, setaddress] = useState(user?.address || "");
   const [password, setpassword] = useState("");
-  const [email, setemail] = useState(user.email || "");
+  const [email, setemail] = useState(user?.email || "");
 
   const logout = async () => {
     const res = await axios.get("http://localhost:8000/user/logout", {
@@ -29,6 +30,10 @@ const LoggedIn = ({ user, setUser }) => {
       password: null,
     });
   };
+
+  if (!user) {
+    return <div>Loading...</div>; // or some other placeholder UI
+  }
 
   return (
     <div className="flex flex-col mt-7 justify-center gap-5 items-center">

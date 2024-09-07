@@ -154,3 +154,41 @@ app.post("/contactus/add", (req, res) => {
 app.listen(8001, () => {
   console.log("Server is running on port 8001");
 });
+
+const session = require('express-session');
+const portt = 8003;
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Use session middleware
+app.use(session({
+  secret: 'yourSecretKey',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // set to true if using https
+}));
+
+// Simulated user login endpoint (for testing)
+app.post('/user/login', (req, res) => {
+  // Assuming successful login, store user info in session
+  req.session.user = { username: 'testUser' };
+  res.send({ message: 'Logged in successfully' });
+});
+
+// Logout endpoint
+app.get('/user/logout', (req, res) => {
+  // Destroy the session to log out the user
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).send({ message: 'Logout failed' });
+    }
+    res.clearCookie('connect.sid'); // clear the cookie as well
+    res.send({ message: 'Logged out successfully' });
+  });
+});
+
+// Start the server
+app.listen(portt, () => {
+  console.log(`Server is running on http://localhost:${portt}`);
+});
