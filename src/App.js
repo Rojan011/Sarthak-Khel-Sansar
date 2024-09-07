@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
@@ -12,7 +12,10 @@ import Login from "./pages/Login";
 import UseGlobal from "./hooks/UseGlobal";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import LoggedIn from "./components/LoggedIn";
+// import LoggedIn from "./components/LoggedIn";
+import Register from "./components/Register";
+import SignUp from "./components/SignUp";
+import SignUpTo from "./components/SignUpTo";
 
 function App() {
   const { getUser } = UseGlobal();
@@ -37,7 +40,9 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="news" element={<News />} />
           <Route path="events" element={<Events />} />
-          <Route path="registers" element={<LoggedIn/>}/>
+          <Route path="registers" element={<Register />} />
+          <Route path="signup" element={<SignUp />} />
+          <Route path="signupto" element={<SignUpTo />} />
           <Route
             path="login"
             element={<Login User={User} setUser={setUser} />}
