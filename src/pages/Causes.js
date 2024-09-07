@@ -3,6 +3,8 @@ import Stats from "../components/Stats";
 import FeaturedCauses from "../components/FeaturedCauses";
 import DonationCard from "../components/DonationCard";
 import axios from "axios";
+import { Carousel2 } from "../components/Accessories/Carousel";
+
 
 const Causes = () => {
   const active = "bg-white text-red-500";
@@ -46,74 +48,8 @@ const Causes = () => {
           </p>
         </div>
       </div>
-
-      <div className="flex w-full items-center flex-col mt-10">
-        <div className="md:w-[80%] w-[98%] flex items-start">
-          <h1 className="text-3xl font-bold py-5">
-            Ensure Education For Every Poor Children
-          </h1>
-        </div>
-
-        <div className="flex flex-col md:w-[80%] w-[98%] border-2 border-black items-center">
-          {/* <img
-            src="assets/causes-edu.jpg"
-            className="w-full h-[200px] md:h-[500px]"
-          /> */}
-          <div className="w-full">
-            <div className="w-full h-20 bg-red-500 flex">
-              <button
-                className={
-                  "border-0 py-2 px-6 focus:outline-none hover:bg-white hover:text-red-500 rounded-none text-lg " +
-                  Three
-                }
-                bg-white
-                text-red-500
-                onClick={() => {
-                  setOne(inactive);
-                  setTwo(inactive);
-                  setThree(active);
-                }}
-              >
-                Donations
-              </button>
-              <button
-                className={
-                  "border-0 py-2 px-6 focus:outline-none hover:bg-white hover:text-red-500 rounded-none text-lg " +
-                  Two
-                }
-                onClick={() => {
-                  setOne(inactive);
-                  setTwo(active);
-                  setThree(inactive);
-                }}
-              >
-                Featured Causes
-              </button>
-              {User.session && (
-                <button
-                  className={
-                    "border-0 py-2 px-6 focus:outline-none hover:bg-white hover:text-red-500 rounded-none text-lg " +
-                    One
-                  }
-                  onClick={() => {
-                    setOne(active);
-                    setTwo(inactive);
-                    setThree(inactive);
-                  }}
-                >
-                  My Donations
-                </button>
-              )}
-            </div>
-
-            <div className="w-full">
-              {One == active && <Stats User={User} />}
-              {Two == active && <FeaturedCauses />}
-              {Three == active && <DonationCard User={User && User.session} />}
-            </div>
-          </div>
-        </div>
-      </div>
+<Carousel2/>
+      
     </div>
   );
 };
