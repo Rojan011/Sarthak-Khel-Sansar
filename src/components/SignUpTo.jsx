@@ -30,7 +30,6 @@ const SignUpTo = () => {
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 
-
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -52,16 +51,16 @@ const SignUpTo = () => {
   };
 
   return (
-
-    <section className="bg-gray-50 dark:bg-gray-900 flex items-center justify-center min-h-screen overflow-auto">
-  <div className="w-full bg-white rounded-lg shadow dark:border sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-    <div className="p-6 space-y-4 sm:p-8">
-      <h1 className="text-xl font-bold leading-tight text-gray-900 dark:text-white">
-        Become a member
-      </h1>
-      <form className="space-y-4" onSubmit={handleSubmit}>
-        {/* Country Of Residence */}
-        <div>
+    <div className="bg-gray-50 dark:bg-gray-900 flex items-center justify-center min-h-screen overflow-auto ">
+      <section className="mt-6 mb-16" >
+        <div className="w-full bg-white rounded-lg shadow dark:border sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+          <div className="p-6 space-y-4 sm:p-8">
+            <h1 className="text-xl font-bold leading-tight text-gray-900 dark:text-white">
+              Become a member
+            </h1>
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              {/* Country Of Residence */}
+              <div>
                 <label
                   htmlFor="CountryResidence"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -419,17 +418,6 @@ const SignUpTo = () => {
                 />
               </div>
 
-              {/* Declaration to Agree */}
-              <div>
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={agreedToTerms}
-                    onChange={(e) => setAgreedToTerms(e.target.checked)}
-                  />
-                  I agree to the terms and conditions
-                </label>
-              </div>
 
               {/* Terms and Conditions */}
               <div className="flex items-start">
@@ -497,12 +485,11 @@ const SignUpTo = () => {
                   </button>
                 </Link>
               </div>
-            
-      </form>
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
-</section>
-
   );
 };
 
