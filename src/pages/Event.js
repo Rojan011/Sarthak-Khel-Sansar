@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import UpcomingCard from "../components/UpcomingCard";
 import { UpcomingEvent } from "../UpcomingEvent";
+import DonationCard from "../components/DonationCard";
 
 const Events = () => {
   var settingss = {
@@ -26,7 +27,7 @@ const Events = () => {
 
   return (
     <>
-      <div className="w-full mb-[100px]   bg-slate-800 ">
+      <div className="w-full mb-[100px]   bg-gray-200 ">
         <div className="w-full h-20  flex items-center justify-center">
           <h1 className="text-red-500 font-sans font-bold text-5xl">Events</h1>
         </div>

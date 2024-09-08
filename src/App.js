@@ -3,7 +3,6 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Causes from "./pages/Causes";
 import Contact from "./pages/Contact";
 import News from "./pages/News";
@@ -16,6 +15,7 @@ import axios from "axios";
 import Register from "./components/Register";
 import SignUp from "./components/SignUp";
 import SignUpTo from "./components/SignUpTo";
+import Donate from "./pages/Donate";
 
 function App() {
   const { getUser } = UseGlobal();
@@ -35,7 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout User={User} setUser={setUser} />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
+          <Route path="donate" element={<Donate />} />
           <Route path="causes" element={<Causes />} />
           <Route path="contact" element={<Contact />} />
           <Route path="news" element={<News />} />

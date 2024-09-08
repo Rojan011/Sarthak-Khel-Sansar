@@ -49,10 +49,10 @@ const Header = ({ path, User }) => {
               </a>
             </li>
           </Link>
-          <Link to="/about" className="w-[100%] lg:w-auto">
+          <Link to="/donate" className="w-[100%] lg:w-auto">
             <li>
-              <a href="#" style={{ color: path == "/about" ? "red" : "" }}>
-                About
+              <a href="#" style={{ color: path == "/donate" ? "red" : "" }}>
+                Donate
               </a>
             </li>
           </Link>

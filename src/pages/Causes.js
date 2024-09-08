@@ -1,35 +1,7 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import Stats from "../components/Stats";
-import FeaturedCauses from "../components/FeaturedCauses";
-import DonationCard from "../components/DonationCard";
-import axios from "axios";
 import { Carousel2 } from "../components/Accessories/Carousel";
 
-
 const Causes = () => {
-  const active = "bg-white text-red-500";
-  const inactive = "bg-red-500 text-white";
-  const [One, setOne] = useState(inactive);
-  const [Two, setTwo] = useState(inactive);
-  const [Three, setThree] = useState(active);
-  const [User, setUser] = useState({ session: null });
-  const [UserDonations, setUserDonations] = useState([]);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    const checkSession = async () => {
-      const res = await axios.get("http://localhost:8000/user/login", {
-        withCredentials: true,
-      });
-      setUser(res.data);
-      console.log(User, "cause");
-      return User;
-    };
-
-    checkSession();
-
-    console.log(User, "fdfdfdfdfrjieurireuieru");
-  }, []);
-
   return (
     <div className="mb-[120px] flex flex-col items-center">
       <div
@@ -48,8 +20,7 @@ const Causes = () => {
           </p>
         </div>
       </div>
-<Carousel2/>
-      
+      <Carousel2 />
     </div>
   );
 };

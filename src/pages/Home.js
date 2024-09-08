@@ -18,6 +18,8 @@ import { ProfileCard } from "../components/ProfileCard";
 import { Team } from "../Team";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { Carousel2 } from "../components/Accessories/Carousel";
+
 
 const Home = () => {
   React.useEffect(() => {
@@ -94,6 +96,9 @@ const Home = () => {
         <p>
           HOW COULD <span style={{ color: "var(--red)" }}>YOU HELP ?</span>
         </p>
+        <div className="w-full">
+         <Carousel2/>
+        </div>
         <div class="help-container">
           {help.map((e) => {
             return (
