@@ -16,12 +16,12 @@ const NewsCard = () => {
   return (
     <section class="text-gray-600 body-font ">
       <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap w-full mb-20 justify-center items-center">
-          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <div class="flex flex-col w-full mb-20 justify-center items-center">
+          <div class="lg:w-full w-full mb-6 text-center">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
               Ngo Latest News
             </h1>
-            <div class="h-1 w-20 bg-red-500 rounded"></div>
+            <div class="h-1 w-20 bg-red-500 rounded mx-auto"></div>
           </div>
         </div>
         <div class="flex flex-wrap m-4">
