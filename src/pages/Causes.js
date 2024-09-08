@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Carousel2 } from "../components/Accessories/Carousel";
+import { TypeAnimation } from "react-type-animation";
 
 const Causes = () => {
   return (
@@ -10,14 +11,25 @@ const Causes = () => {
       >
         <div className="flex flex-col w-[90%] md:w-[50%] h-full justify-around text-center text-gray-100">
           <h1 className="text-6xl tracking-tighter font-sans">Our Causes</h1>
-          <p className="text-gray-200">
-            We are a team of dedicated individuals, volunteers, and supporters
-            who share a common vision: to alleviate suffering, promote equality,
-            and uplift communities. With unwavering determination and a
-            heartfelt passion for change, we have undertaken numerous projects
-            and initiatives, all aimed at addressing the pressing challenges
-            faced by marginalized individuals and communities.
-          </p>
+          <div>
+            <TypeAnimation
+              preRenderFirstString={true}
+              sequence={[
+                500,
+                "We produce food for Mice", // initially rendered starting point
+                1000,
+                "We produce food for Hamsters",
+                1000,
+                "We produce food for Guinea Pigs",
+                1000,
+                "We produce food for Chinchillas",
+                500,
+              ]}
+              speed={50}
+              style={{ fontSize: "2em" }}
+              repeat={Infinity}
+            />
+          </div>
         </div>
       </div>
       <Carousel2 />
